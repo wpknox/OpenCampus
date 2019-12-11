@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ss4.opencampus.mapViews.MapsActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_filter"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/checkBuildings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="@string/check_buildings"
+            android:textColor="#000" />
+
+        <CheckBox
+            android:id="@+id/checkFeatures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBuildings"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="@string/check_features"
+            android:textColor="#000" />
+
+        <CheckBox
+            android:id="@+id/checkUSpots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkFeatures"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="@string/check_uspots"
+            android:textColor="#000" />
+
+        <CheckBox
+            android:id="@+id/checkCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkUSpots"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="@string/check_custom_markers"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/action_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:text="@string/btn_ok"
+            android:textColor="#33bbff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:text="@string/btn_cancel"
+            android:textColor="#33bbff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

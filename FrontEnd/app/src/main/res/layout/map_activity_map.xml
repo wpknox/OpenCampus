@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<fragment
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mapViews.MapsActivity" />
+
+    <ImageView
+        android:id="@+id/image_view_default"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.5"
+        android:src="@drawable/ic_crosshair_black_24dp" />
+
+    <Button
+        android:id="@+id/customMarkerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="@string/btn_place_marker" />
+
+    <Button
+        android:id="@+id/loadRouteButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="8dp"
+        android:text="Load route" />
+
+    <Button
+        android:id="@+id/routeStartButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="8dp"
+        android:text="Place route start" />
+
+    <Button
+        android:id="@+id/routeEndButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:text="Place route end" />
+
+    <Button
+        android:id="@+id/hideRouteButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/saveRouteButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:text="Save Route" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="@string/btn_filters" />
+
+    <Button
+        android:id="@+id/dashboardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="viewDashboard"
+        android:padding="8dp"
+        android:text="@string/btn_dashboard" />
+
+    <Button
+        android:id="@+id/hideFloorplanButton"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="hideFloorplan"
+        android:padding="8dp"
+        android:text="Hide Floorplan" />
+
+    <Button
+        android:id="@+id/button_floor1"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/button_floor2"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/button_floor3"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="200dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/button_floor4"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="260dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/button_floor5"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="320dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/button_floor6"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="380dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/button_floor7"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/button_floor8"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/button_floor9"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="200dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/button_floor10"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="260dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="10" />
+
+    <Button
+        android:id="@+id/button_floor11"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="320dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="11" />
+
+    <Button
+        android:id="@+id/button_floor12"
+
+        android:visibility="gone"
+        android:onClick="selectFloor"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="380dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
+        android:text="12" />
+
+</RelativeLayout>
