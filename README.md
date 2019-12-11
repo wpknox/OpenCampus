@@ -3,7 +3,7 @@
 ## Information
 This project was created for my COM S 309 class in the fall of 2019. We made an Andriod app written in Java that was a map of our university's campus. In the app, users can create and post different areas of around campus that they can share with other users. The users can interact with each other by leaving reviews and ratings on someone else's posted location or "USpot". The app will also 
 
-To create this app, we used Android Studio for the Frontend and Spring Boot for the Backend. We used the Google Maps API for our map. To save information, we used a MySQL server and JPA to access the server from the Backend code.
+To create this app, we used **Android Studio** for the Frontend and **Spring Boot** for the Backend. We used the **Google Maps API** for our map. To save information, we used a **MySQL server and JPA** to access the server from the Backend code.
 
 Morgan Smith, Axel Zumwalt, and Brett Santema were the Frontend developers for this project. I wrote the Backend code that handled all HTTP Requests and processed transactions to the MySQL Server. Before this project, I did not have any experience with HTTP Requests, Spring, or SQL. Having this project really helped develop my skills as a software engineering and taught me to think outside the box and how to approach problems that I had not seen before.
 
@@ -12,7 +12,6 @@ Any file with the **@author Willis Knox** tag was written by me. Basically, that
 Below is a basic description of our app when we first designed it and the Postman collection I used to test the Backend.
 
 ___
-
 ### Group Members
 * Willis Knox
 * Morgan Smith
