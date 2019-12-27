@@ -1,7 +1,7 @@
 # OpenCampus
 
 ## Information
-This project was created for my COM S 309 class in the fall of 2019. We made an Andriod app written in Java that was a map of our university's campus. In the app, users can create and post different areas of around campus that they can share with other users. The users can interact with each other by leaving reviews and ratings on someone else's posted location or "USpot". The app will also 
+This project was created for my COM S 309 class in the fall of 2019. We made an Android app written in Java that was a map of our university's campus. In the app, users can create and post different areas of around campus that they can share with other users. The users can interact with each other by leaving reviews and ratings on someone else's posted location or "USpot". The app will also 
 
 To create this app, we used **Android Studio** for the Frontend and **Spring Boot** for the Backend. We used the **Google Maps API** for our map. To save information, we used a **MySQL server and JPA** to access the server from the Backend code.
 
